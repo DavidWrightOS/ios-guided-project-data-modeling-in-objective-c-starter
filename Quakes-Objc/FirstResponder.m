@@ -10,4 +10,16 @@
 
 @implementation FirstResponder
 
+// myFirstResponder.name = @"Dimitri"
+// [myFirstResponder setName:@"Dimitri"];
+
+- (void)setName:(NSString *)name
+{
+    // willSet
+    
+    _name = name.copy; // [name copy];
+    
+    // didSet
+}
+
 @end
