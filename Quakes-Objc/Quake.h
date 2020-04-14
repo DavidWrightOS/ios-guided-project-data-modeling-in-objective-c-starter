@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) double longitude;
 
 @property (nonatomic, readonly, copy) NSString *type;
-@property (nonatomic, readonly, copy) NSString *alert;
+@property (nonatomic, readonly, copy, nullable) NSString *alert;
 
 @end
 
