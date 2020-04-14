@@ -10,6 +10,8 @@
 		87BE7CA124454CB80060B8A6 /* FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA024454CB80060B8A6 /* FirstResponder.m */; };
 		87BE7CA4244553060060B8A6 /* Quake.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA3244553060060B8A6 /* Quake.m */; };
 		87BE7CA7244563140060B8A6 /* QuakeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA6244563140060B8A6 /* QuakeResults.m */; };
+		87BE7CA9244566440060B8A6 /* QuakeWithNullMag.json in Resources */ = {isa = PBXBuildFile; fileRef = 87BE7CA8244566440060B8A6 /* QuakeWithNullMag.json */; };
+		87BE7CAA244566650060B8A6 /* QuakeWithNullMag.json in Resources */ = {isa = PBXBuildFile; fileRef = 87BE7CA8244566440060B8A6 /* QuakeWithNullMag.json */; };
 		BDFC8F8223FDA09F00A39B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */; };
 		BDFC8F8523FDA09F00A39B21 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8423FDA09F00A39B21 /* SceneDelegate.m */; };
 		BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8723FDA09F00A39B21 /* ViewController.m */; };
@@ -47,6 +49,7 @@
 		87BE7CA3244553060060B8A6 /* Quake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quake.m; sourceTree = "<group>"; };
 		87BE7CA5244563140060B8A6 /* QuakeResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuakeResults.h; sourceTree = "<group>"; };
 		87BE7CA6244563140060B8A6 /* QuakeResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuakeResults.m; sourceTree = "<group>"; };
+		87BE7CA8244566440060B8A6 /* QuakeWithNullMag.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuakeWithNullMag.json; sourceTree = "<group>"; };
 		BDFC8F7D23FDA09F00A39B21 /* Quakes-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quakes-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDFC8F8023FDA09F00A39B21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 			children = (
 				BDFC8FA723FDA0C800A39B21 /* Quake.json */,
 				BDFC8FAA23FDA0DA00A39B21 /* Quakes.json */,
+				87BE7CA8244566440060B8A6 /* QuakeWithNullMag.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -245,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BE7CA9244566440060B8A6 /* QuakeWithNullMag.json in Resources */,
 				BDFC8FAB23FDA0DA00A39B21 /* Quakes.json in Resources */,
 				BDFC8F9023FDA0A100A39B21 /* LaunchScreen.storyboard in Resources */,
 				BDFC8FA823FDA0C800A39B21 /* Quake.json in Resources */,
@@ -257,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87BE7CAA244566650060B8A6 /* QuakeWithNullMag.json in Resources */,
 				BDFC8FA923FDA0C800A39B21 /* Quake.json in Resources */,
 				BDFC8FAC23FDA0DA00A39B21 /* Quakes.json in Resources */,
 			);
