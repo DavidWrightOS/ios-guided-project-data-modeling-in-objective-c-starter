@@ -14,4 +14,9 @@
 
 @implementation Quakes_ObjcTests
 
+- (void)testQuakeParsing
+{
+    
+}
+
 @end
