@@ -23,4 +23,9 @@
     return self;
 }
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
+{
+    return nil;
+}
+
 @end
