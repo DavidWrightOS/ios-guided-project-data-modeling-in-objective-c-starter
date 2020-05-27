@@ -22,4 +22,9 @@
     return self;
 }
 
+- (instancetype)initWithDictionary:(double)dictionary
+{
+    return nil;
+}
+
 @end
