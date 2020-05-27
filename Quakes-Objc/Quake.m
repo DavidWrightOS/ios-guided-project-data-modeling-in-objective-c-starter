@@ -32,11 +32,36 @@
     NSNumber *magnitudeNumber = [properties objectForKey:@"mag"];
     if (![magnitudeNumber isKindOfClass:[NSNumber class]]) return nil;
     
+    NSNumber *place = [properties objectForKey:@"place"];
+    if (![place isKindOfClass:[NSString class]]) return nil;
+    
+    NSNumber *timeInMilliseconds = [properties objectForKey:@"time"];
+    if (![timeInMilliseconds isKindOfClass:[NSNumber class]]) return nil;
+    
+    NSDate *time = [NSDate dateWithTimeIntervalSince1970:timeInMilliseconds.longValue/1000.];
+    
+    
+    NSDictionary *geometry = [dictionary objectForKey:@"geometry"];
+    if (![geometry isKindOfClass:[NSDictionary class]]) return nil;
+    
+    NSArray *coordinates = [properties objectForKey:@"coordinates"];
+    if (![coordinates isKindOfClass:[NSArray class]]) return nil;
+    
+    NSNumber *latitudeNumber = nil;
+    NSNumber *longitudeNumber = nil;
+    
+    if (coordinates.count >= 2) {
+        latitudeNumber = [coordinates objectAtIndex:0];
+        longitudeNumber = [coordinates objectAtIndex:1];
+        if (![latitudeNumber isKindOfClass:[NSNumber class]]) return nil;
+        if (![longitudeNumber isKindOfClass:[NSNumber class]]) return nil;
+    }
+    
     return [self initWithMagnitude:magnitudeNumber.doubleValue
-                             place:nil
-                              time:nil
-                          latitude:0
-                         longitude:0
+                             place:place
+                              time:time
+                          latitude:latitudeNumber.doubleValue
+                         longitude:longitudeNumber.doubleValue
                               type:nil
                              alert:nil];
 }
