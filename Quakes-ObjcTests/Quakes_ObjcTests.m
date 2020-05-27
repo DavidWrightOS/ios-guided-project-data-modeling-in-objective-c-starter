@@ -20,7 +20,6 @@
 - (void)testQuakeParsing
 {
     NSData *quakeData = loadFile(@"Quake.json", [Quakes_ObjcTests class]);
-    
 //    NSLog(@"quake (as data): %@", quakeData);
     
 //    NSString *quakeJSONString = [[NSString alloc] initWithData:quakeData encoding:NSUTF8StringEncoding];
@@ -33,7 +32,7 @@
         NSLog(@"We've got an error: %@", jsonError);
     }
     
-    NSLog(@"quake (as a dictionary): %@", quakeDictionary);
+//    NSLog(@"quake (as a dictionary): %@", quakeDictionary);
     
     if (![quakeDictionary isKindOfClass:[NSDictionary class]]) {
         NSLog(@"quakeDictionary is not a dictionary!");
