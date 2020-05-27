@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6305D863247E0FF90070C46B /* QuakeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6305D862247E0FF90070C46B /* QuakeResults.m */; };
+		6305D864247E13140070C46B /* QuakeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6305D862247E0FF90070C46B /* QuakeResults.m */; };
 		631EA5D0247CAA1500D2E70B /* FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA5CF247CAA1500D2E70B /* FirstResponder.m */; };
 		631EA5D3247DEA9B00D2E70B /* Quake.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA5D2247DEA9B00D2E70B /* Quake.m */; };
 		BDFC8F8223FDA09F00A39B21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC8F8123FDA09F00A39B21 /* AppDelegate.m */; };
@@ -121,6 +121,8 @@
 				631EA5CF247CAA1500D2E70B /* FirstResponder.m */,
 				631EA5D1247DEA9B00D2E70B /* Quake.h */,
 				631EA5D2247DEA9B00D2E70B /* Quake.m */,
+				6305D861247E0FF90070C46B /* QuakeResults.h */,
+				6305D862247E0FF90070C46B /* QuakeResults.m */,
 				BDFC8F8923FDA09F00A39B21 /* Main.storyboard */,
 				BDFC8F8C23FDA0A100A39B21 /* Assets.xcassets */,
 				BDFC8F8E23FDA0A100A39B21 /* LaunchScreen.storyboard */,
@@ -136,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				BDFC8F9C23FDA0A100A39B21 /* Quakes_ObjcTests.m */,
-				6305D861247E0FF90070C46B /* QuakeResults.h */,
-				6305D862247E0FF90070C46B /* QuakeResults.m */,
 				BDFC8F9E23FDA0A100A39B21 /* Info.plist */,
 			);
 			path = "Quakes-ObjcTests";
@@ -271,6 +271,7 @@
 			files = (
 				BDFC8FB323FDA12B00A39B21 /* LSIFileHelper.m in Sources */,
 				BDFC8FB523FDA12B00A39B21 /* LSILog.m in Sources */,
+				6305D864247E13140070C46B /* QuakeResults.m in Sources */,
 				BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */,
 				631EA5D3247DEA9B00D2E70B /* Quake.m in Sources */,
 				BDFC8FB723FDA12B00A39B21 /* LSIErrors.m in Sources */,
@@ -287,7 +288,6 @@
 			files = (
 				BDFC8FB423FDA12B00A39B21 /* LSIFileHelper.m in Sources */,
 				BDFC8FB623FDA12B00A39B21 /* LSILog.m in Sources */,
-				6305D863247E0FF90070C46B /* QuakeResults.m in Sources */,
 				BDFC8F9D23FDA0A100A39B21 /* Quakes_ObjcTests.m in Sources */,
 				BDFC8FB823FDA12B00A39B21 /* LSIErrors.m in Sources */,
 			);
