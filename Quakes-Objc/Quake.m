@@ -10,7 +10,7 @@
 
 @implementation Quake
 
-- (instancetype)initWithMagnitude:(double)magnitude place:(NSString *)place time:(NSDate *)time latitude:(double)latitude longitude:(double)longitude
+- (instancetype)initWithMagnitude:(double)magnitude place:(NSString *)place time:(NSDate *)time latitude:(double)latitude longitude:(double)longitude type:(NSString *)type alert:(NSString *)alert
 {
     if (self = [super init]) {
         _magnitude = magnitude;
@@ -18,13 +18,27 @@
         _time = time;
         _latitude = latitude;
         _longitude = longitude;
+        _type = type.copy;
+        _alert = alert.copy;
     }
     return self;
 }
 
-- (instancetype)initWithDictionary:(double)dictionary
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
-    return nil;
+    NSDictionary *properties = [dictionary objectForKey:@"properties"];
+    if (![properties isKindOfClass:[NSDictionary class]]) return nil;
+    
+    NSNumber *magnitudeNumber = [properties objectForKey:@"mag"];
+    if (![magnitudeNumber isKindOfClass:[NSNumber class]]) return nil;
+    
+    return [self initWithMagnitude:magnitudeNumber.doubleValue
+                             place:nil
+                              time:nil
+                          latitude:0
+                         longitude:0
+                              type:nil
+                             alert:nil];
 }
 
 @end
