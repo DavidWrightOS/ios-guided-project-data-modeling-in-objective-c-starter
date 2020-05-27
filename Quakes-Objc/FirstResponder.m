@@ -8,15 +8,31 @@
 
 #import "FirstResponder.h"
 
+// Custom Class Extension
+//@interface FirstResponder () {
+//    NSString *myInternalName;
+//}
+//
+//@end
+
 @implementation FirstResponder
+
+// @synthesize name;
+// @synthesize name = _name;
+@synthesize name = myInternalName;
 
 - (void)setName:(NSString *)name
 {
     // willSet
     
-    _name = name.copy; // [name copy];
+    myInternalName = name.copy; // [name copy];
     
     // didSet
+}
+
+- (NSString *)name
+{
+    return myInternalName.copy;
 }
 
 @end
