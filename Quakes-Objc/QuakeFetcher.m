@@ -68,6 +68,21 @@ static NSString *const QuakeFetcherBaseURLString = @"https://earthquake.usgs.gov
             return;
         }
         
+        QuakeResults *results = [[QuakeResults alloc] initWithDictionary:dictionary];
+        if (!results) {
+            NSError *error = [NSError errorWithDomain:@"QuakeFetcherDomain" code:-1 userInfo:nil];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            
+            return;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completionHandler(results.quakes, nil);
+        });
+                
     }] resume];
 }
 

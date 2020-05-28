@@ -95,8 +95,11 @@ typedef int(^OperationBlock)(int a, int b);
     QuakeFetcher *fetcher = [[QuakeFetcher alloc] init];
     
     [fetcher fetchQuakesWithCompletionHandler:^(NSArray *quakes, NSError *error) {
-        NSLog(@"Got to the completionHandler");
+        NSLog(@"Got this error: %@", error);
+        NSLog(@"Got these quakes: %@", quakes);
     }];
+    
+    
 }
 
 - (void)doWorkWithOperation:(int (^)(int a, int b))operation
