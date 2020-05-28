@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
+typedef void(^QuakeFetcherCompletionHandler)(NSArray * _Nullable quakes, NSError * _Nullable error);
+
+//NS_ASSUME_NONNULL_BEGIN
 
 @interface QuakeFetcher : NSObject
 
+- (void)fetchQuakesInTimeInterval:(nonnull NSDateInterval *)interval completionHandler:(nonnull QuakeFetcherCompletionHandler)completionHandler;
+
 @end
 
-NS_ASSUME_NONNULL_END
+//NS_ASSUME_NONNULL_END
