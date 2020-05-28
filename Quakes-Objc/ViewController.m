@@ -10,6 +10,8 @@
 #import "LSILog.h"
 #import "FirstResponder.h"
 
+typedef int(^OperationBlock)(int a, int b);
+
 @interface ViewController ()
 
 @property (nonatomic) int(^blockPropertyName)(int a, int b);
@@ -36,7 +38,11 @@
     firstResponder.name = @"Dimitri";
     NSLog(@"firstResponder.name: %@", firstResponder.name);
     
-    int (^performMathOnNumbers)(int a, int b) = ^int(int a, int b) {
+//    int (^performMathOnNumbers)(int a, int b) = ^int(int a, int b) {
+//        return a + b;
+//    };
+    
+    OperationBlock performMathOnNumbers = ^int(int a, int b) {
         return a + b;
     };
     
@@ -76,10 +82,13 @@
         return a*3 - b*2;
     }];
     // 6.
+    
+    [self doWorkWithOperation:NULL];
 }
 
 - (void)doWorkWithOperation:(int (^)(int a, int b))operation
 {
+    if (operation == NULL) return;
     // 2.
     int result = operation(5, 7);
     // 4.
