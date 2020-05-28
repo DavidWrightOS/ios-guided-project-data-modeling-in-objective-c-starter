@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63AD5B66247F560600900875 /* NSDateInterval+DayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD5B65247F560600900875 /* NSDateInterval+DayAdditions.m */; };
 		87BE7CA124454CB80060B8A6 /* FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA024454CB80060B8A6 /* FirstResponder.m */; };
 		87BE7CA4244553060060B8A6 /* Quake.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA3244553060060B8A6 /* Quake.m */; };
 		87BE7CA7244563140060B8A6 /* QuakeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA6244563140060B8A6 /* QuakeResults.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63AD5B64247F560600900875 /* NSDateInterval+DayAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateInterval+DayAdditions.h"; sourceTree = "<group>"; };
+		63AD5B65247F560600900875 /* NSDateInterval+DayAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateInterval+DayAdditions.m"; sourceTree = "<group>"; };
 		87BE7C9F24454CB80060B8A6 /* FirstResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstResponder.h; sourceTree = "<group>"; };
 		87BE7CA024454CB80060B8A6 /* FirstResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstResponder.m; sourceTree = "<group>"; };
 		87BE7CA2244553060060B8A6 /* Quake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quake.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				87BE7CA3244553060060B8A6 /* Quake.m */,
 				87BE7CA5244563140060B8A6 /* QuakeResults.h */,
 				87BE7CA6244563140060B8A6 /* QuakeResults.m */,
+				63AD5B64247F560600900875 /* NSDateInterval+DayAdditions.h */,
+				63AD5B65247F560600900875 /* NSDateInterval+DayAdditions.m */,
 				BDFC8F8923FDA09F00A39B21 /* Main.storyboard */,
 				BDFC8F8C23FDA0A100A39B21 /* Assets.xcassets */,
 				BDFC8F8E23FDA0A100A39B21 /* LaunchScreen.storyboard */,
@@ -278,6 +283,7 @@
 				BDFC8FB323FDA12B00A39B21 /* LSIFileHelper.m in Sources */,
 				BDFC8FB523FDA12B00A39B21 /* LSILog.m in Sources */,
 				87BE7CA7244563140060B8A6 /* QuakeResults.m in Sources */,
+				63AD5B66247F560600900875 /* NSDateInterval+DayAdditions.m in Sources */,
 				BDFC8F8823FDA09F00A39B21 /* ViewController.m in Sources */,
 				87BE7CA4244553060060B8A6 /* Quake.m in Sources */,
 				BDFC8FB723FDA12B00A39B21 /* LSIErrors.m in Sources */,
