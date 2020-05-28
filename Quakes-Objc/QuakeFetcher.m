@@ -8,6 +8,8 @@
 
 #import "QuakeFetcher.h"
 #import "NSDateInterval+DayAdditions.h"
+#import "QuakeResults.h"
+#import "Quake.h"
 
 static NSString *const QuakeFetcherBaseURLString = @"https://earthquake.usgs.gov/fdsnws/event/1/query";
 
@@ -44,6 +46,27 @@ static NSString *const QuakeFetcherBaseURLString = @"https://earthquake.usgs.gov
 //    [dataTask resume];
     
     [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            NSLog(@"Error fetching quakes: %@", error);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, error);
+            });
+            
+            return;
+        }
+        
+        NSError *jsonError;
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
+        if (!dictionary) {
+            NSLog(@"Error decoding JSON: %@", jsonError);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                completionHandler(nil, jsonError);
+            });
+            
+            return;
+        }
         
     }] resume];
 }
