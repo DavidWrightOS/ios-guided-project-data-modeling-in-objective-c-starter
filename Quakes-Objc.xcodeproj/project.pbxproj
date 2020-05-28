@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63AD5B66247F560600900875 /* NSDateInterval+DayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD5B65247F560600900875 /* NSDateInterval+DayAdditions.m */; };
+		63AD5B69247F5BE300900875 /* QuakeFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AD5B68247F5BE300900875 /* QuakeFetcher.m */; };
 		87BE7CA124454CB80060B8A6 /* FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA024454CB80060B8A6 /* FirstResponder.m */; };
 		87BE7CA4244553060060B8A6 /* Quake.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA3244553060060B8A6 /* Quake.m */; };
 		87BE7CA7244563140060B8A6 /* QuakeResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 87BE7CA6244563140060B8A6 /* QuakeResults.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		63AD5B64247F560600900875 /* NSDateInterval+DayAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDateInterval+DayAdditions.h"; sourceTree = "<group>"; };
 		63AD5B65247F560600900875 /* NSDateInterval+DayAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDateInterval+DayAdditions.m"; sourceTree = "<group>"; };
+		63AD5B67247F5BE300900875 /* QuakeFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuakeFetcher.h; sourceTree = "<group>"; };
+		63AD5B68247F5BE300900875 /* QuakeFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuakeFetcher.m; sourceTree = "<group>"; };
 		87BE7C9F24454CB80060B8A6 /* FirstResponder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstResponder.h; sourceTree = "<group>"; };
 		87BE7CA024454CB80060B8A6 /* FirstResponder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstResponder.m; sourceTree = "<group>"; };
 		87BE7CA2244553060060B8A6 /* Quake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quake.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				BDFC8F8723FDA09F00A39B21 /* ViewController.m */,
 				87BE7C9F24454CB80060B8A6 /* FirstResponder.h */,
 				87BE7CA024454CB80060B8A6 /* FirstResponder.m */,
+				63AD5B67247F5BE300900875 /* QuakeFetcher.h */,
+				63AD5B68247F5BE300900875 /* QuakeFetcher.m */,
 				87BE7CA2244553060060B8A6 /* Quake.h */,
 				87BE7CA3244553060060B8A6 /* Quake.m */,
 				87BE7CA5244563140060B8A6 /* QuakeResults.h */,
@@ -289,6 +294,7 @@
 				BDFC8FB723FDA12B00A39B21 /* LSIErrors.m in Sources */,
 				BDFC8F8223FDA09F00A39B21 /* AppDelegate.m in Sources */,
 				87BE7CA124454CB80060B8A6 /* FirstResponder.m in Sources */,
+				63AD5B69247F5BE300900875 /* QuakeFetcher.m in Sources */,
 				BDFC8F9323FDA0A100A39B21 /* main.m in Sources */,
 				BDFC8F8523FDA09F00A39B21 /* SceneDelegate.m in Sources */,
 			);
