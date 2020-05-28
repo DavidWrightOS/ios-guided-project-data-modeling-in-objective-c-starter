@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic) int(^blockPropertyName)(int a, int b);
+
 @end
 
 @implementation ViewController
@@ -33,6 +35,40 @@
     
     firstResponder.name = @"Dimitri";
     NSLog(@"firstResponder.name: %@", firstResponder.name);
+    
+    int (^performMathOnNumbers)(int a, int b) = ^int(int a, int b) {
+        return a + b;
+    };
+    
+    int result = performMathOnNumbers(5, 8);
+    NSLog(@"The sum is: %d", result);
+    
+    performMathOnNumbers = ^int(int a, int b) {
+           return a * b;
+       };
+    
+    result = performMathOnNumbers(5, 8);
+    NSLog(@"The product is: %d", result);
+    
+    self.blockPropertyName = performMathOnNumbers;
+    
+    result = self.blockPropertyName(5, 8);
+    NSLog(@"The product is: %d", result);
+    
+    self.blockPropertyName = ^int(int a, int b) {
+        return a*2 + b*3;
+    };
+    
+    result = self.blockPropertyName(5, 8);
+    NSLog(@"The result is: %d", result);
+    
+    // access ivar directly
+//    _blockPropertyName
+//    self->_blockPropertyName
+    
+    // access getter method
+//    self.blockPropertyName
+//    [self blockPropertyName]
 }
 
 
