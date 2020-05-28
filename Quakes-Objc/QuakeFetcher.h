@@ -14,6 +14,8 @@ typedef void(^QuakeFetcherCompletionHandler)(NSArray * _Nullable quakes, NSError
 
 @interface QuakeFetcher : NSObject
 
+- (void)fetchQuakesWithCompletionHandler:(nonnull QuakeFetcherCompletionHandler)completionHandler;
+
 - (void)fetchQuakesInTimeInterval:(nonnull NSDateInterval *)interval completionHandler:(nonnull QuakeFetcherCompletionHandler)completionHandler;
 
 @end
