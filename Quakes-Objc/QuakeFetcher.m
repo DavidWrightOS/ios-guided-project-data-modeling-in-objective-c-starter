@@ -19,15 +19,33 @@ static NSString *const QuakeFetcherBaseURLString = @"https://earthquake.usgs.gov
     [self fetchQuakesInTimeInterval:pastWeek
                   completionHandler:completionHandler];
 }
+
 - (void)fetchQuakesInTimeInterval:(NSDateInterval *)interval
                 completionHandler:(QuakeFetcherCompletionHandler)completionHandler
 {
     NSURLComponents *urlComponents = [[NSURLComponents alloc] initWithString:QuakeFetcherBaseURLString];
-    
     NSISO8601DateFormatter *formatter = [[NSISO8601DateFormatter alloc] init];
     
     NSString *startTimeString = [formatter stringFromDate:interval.startDate];
-    NSString *entTimeString = [formatter stringFromDate:interval.endDate];
+    NSString *endTimeString = [formatter stringFromDate:interval.endDate];
+    
+    urlComponents.queryItems = @[
+        [NSURLQueryItem queryItemWithName:@"format" value:@"geojson"],
+        [NSURLQueryItem queryItemWithName:@"starttime" value:startTimeString],
+        [NSURLQueryItem queryItemWithName:@"endtime" value:endTimeString],
+    ];
+    
+    NSURL *url = urlComponents.URL;
+    NSLog(@"Fetching Quakes: %@", url);
+    
+//    NSURLSessionDataTask *dataTask = [NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//
+//    }];
+//    [dataTask resume];
+    
+    [[NSURLSession.sharedSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+    }] resume];
 }
 
 @end
